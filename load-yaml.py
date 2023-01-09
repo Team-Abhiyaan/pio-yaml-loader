@@ -12,8 +12,6 @@ print("using YAML file at %s" % yaml_file_location)
 # load YAML file
 dictionary = yaml.load(open(yaml_file_location, "r"), yaml.Loader)
 
-print(projenv.Dump())
-
 # list of definitions we are going to pass to the compiler
 defines = [("yaml_params")] # by default we define "yaml_params" so that we can check #ifdef
 
