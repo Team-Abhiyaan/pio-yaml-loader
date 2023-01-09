@@ -7,11 +7,7 @@ Import("projenv")
 # look for the environment variable MCU_PARAMS_FILE
 yaml_file_location = os.getenv("MCU_PARAMS_FILE", default="mcu-params.yml")
 
-print("looking for YAML file at %s" % yaml_file_location)
-
-if not os.path.exists(yaml_file_location):
-    print("warning: no YAML config file found")
-    exit()
+print("using YAML file at %s" % yaml_file_location)
 
 # load YAML file
 dictionary = yaml.load(open(yaml_file_location, "r"), yaml.Loader)
